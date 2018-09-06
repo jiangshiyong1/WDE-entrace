@@ -1,0 +1,408 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+
+<title>WDE</title>
+<link rel="stylesheet" href="css/index_style.css">
+<link rel="stylesheet" type="text/css" href="css/demo/style_common.css" />
+<link rel="stylesheet" type="text/css" href="css/demo/style5.css" />
+<link rel="stylesheet" type="text/css" href="css/demo/waves.min.css?v=0.7.2">
+<style>
+	#colored-button .btn {
+		color: #fff;
+	}
+
+	#colored-button button,
+	#colored-button button:hover {
+		background: #10364e;
+	}
+	.liimg {
+		background: url(css/img/gou.png) no-repeat;
+		width:20px;
+		height:20px;
+		display: inline-block;
+		cursor: pointer;
+		vertical-align: middle;
+	}
+	.lip {
+		display: inline-block;
+		margin-left: 15px;text-align: left;
+		cursor: pointer;
+		text-decoration: none;
+	}
+	li {
+		height:20%;
+	}
+	li .left{
+		text-align: left;
+	}
+</style>
+<script src="http://www.jq22.com/jquery/jquery-1.10.2.js"></script>
+<script type="text/javascript">
+        Waves.attach('.flat-buttons', ['waves-button']);
+        Waves.attach('.float-buttons', ['waves-button', 'waves-float']);
+        Waves.attach('.float-button-light', ['waves-button', 'waves-float', 'waves-light']);
+    </script>
+    <script type="text/javascript" src="./js/waves.min.js?v=0.7.1"></script>
+    <script type="text/javascript">
+        var currentRoute = false;
+        $(document).on('ready', function () {
+
+            // Init Waves
+            Waves.init();
+            Waves.attach('.drag-ripple', 'waves-block', true);
+            Waves.attach('#bg-pattern', null, true);
+            init();
+            $(window).on('hashchange', routing);
+            /**
+             * Example source code click
+             */
+            $('#example .top-button').on('click', function () {
+                var type = $(this).data('code');
+                $('#source-code .box .code').addClass('hide');
+                $('#source-code .box #code-' + type).removeClass('hide');
+                $('#source-code').removeClass('hide');
+                setTimeout(function () {
+                    $('#source-code').addClass('show');
+                }, 50);
+            });
+            $('#source-code .top-button').on('click', function () {
+
+                $('#source-code').removeClass('show');
+
+                setTimeout(function () {
+                    $('#source-code .box .code').addClass('hide');
+                    $('#source-code').addClass('hide');
+                }, 500);
+            });
+        });
+
+    </script>
+</head>
+<body>
+
+<!-----HEADER STAR----->
+<div class="header1">
+<div class="top_logo"></div> 
+<div class="top_logo1"><a href="./log.html"  target="_blank"><p style="padding: 10% 10%;color:white">发布版本：1.0</p></a></div> 
+</div>
+<div class="header"  id="demo">
+	<div style="float: left;
+	top:20%;
+    width: 100%;
+    height: 150px;
+    position: absolute;
+    z-index: 30;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;">
+	<div  style="margin-left:30%;margin-top:5%">
+		<div class="nav1 brand "><img alt="" src="css/img/logo.png" /></div>
+	</div>
+	<div>
+	<div class="main nav brand text-center" style="margin-top:15%" id="colored-button">> 
+		<!-- fifth  EXAMPLE -->
+		<div class="view view-fifth ">
+			<img src="css/img/1.png" />
+			<div class="mask">
+				<div style="height:100%;line-height:100%;">
+				<ul style="height:90%;list-style-type:none;list-style-image: url(css/img/gou.jpg);">
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">任务抽象易于扩展</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">调度策略多类支持</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">分布式大规模采集</p>
+					</li>
+				</ul>
+				<!--
+					<p>任务抽象易于扩展</p>
+					<p>调度策略多类支持</p>
+					<p>分布式大规模采集</p>
+					-->
+				</div>
+			</div>
+		</div>
+		<div class="view view-fifth ">
+			<img src="css/img/2.png" />
+			<div class="mask">
+				<ul style="height:90%;list-style-type:none;list-style-image: url(css/img/gou.jpg);">
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">多源网络数据感知</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">采集基础服务框架</p>
+					</li>
+					
+				</ul>
+				<!--
+				<div style="height:60%;line-height:60%;margin: 10% 0 0 0">
+					<p>多源网络数据感知</p>
+					<p>采集基础服务框架</p>
+				</div>
+				-->
+			</div>
+		</div>
+		<div class="view view-fifth ">
+			<img src="css/img/3.png" />
+			<div class="mask" style="">
+				<ul style="height:90%;list-style-type:none;list-style-image: url(css/img/gou.jpg);">
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">支持信源多层级划分</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">采集抽取多阶段验证</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">信源状态的及时反馈</p>
+					</li>
+					<li>
+						<button onclick="location='http://10.61.1.37:8085/'" class="btn float-button-light waves-effect waves-button waves-float waves-light">进入系统</button>
+					</li>
+				</ul>
+				<!--
+				<div style="height:60%;line-height:60%;margin: 10% 0 0 0">
+					<p>信源多层级划分</p>
+					<p>采集抽取多阶段验证</p>
+					<p>信源状态及时反馈</p>
+				</div>
+				
+				<div style="margin-bottom: 10%">
+					<button onclick="location='http://10.61.1.37:8085/'" class="btn float-button-light waves-effect waves-button waves-float waves-light">进入系统</button></div>
+				-->
+				</div>
+		</div>
+		<div class="view view-fifth ">
+			<img src="css/img/4.png" />
+			<div class="mask">
+				<ul style="height:90%;list-style-type:none;list-style-image: url(css/img/gou.jpg);">
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">监控的可视化交互</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">线上数据失效检测</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">统计信息实时查看</p>
+					</li>
+					<li>
+						<button onclick="location='http://10.61.1.27:8083/'" class="btn float-button-light waves-effect waves-button waves-float waves-light">进入系统</button>
+					</li>
+				</ul>
+				<!--
+				<div style="height:60%;line-height:60%;margin: 10% 0 0 0">
+					<p>监控的可视化交互</p>
+					<p>线上数据失效检测</p>
+					<p>统计信息实时查看</p>
+				</div>
+				<div style="margin-bottom: 10%">
+					<button onclick="location='http://10.61.1.27:8083/'" class="btn float-button-light waves-effect waves-button waves-float waves-light">进入系统</button>
+				
+				</div>-->
+			</div>
+		</div>
+		<div class="view view-fifth ">
+			<img src="css/img/5.png" />
+			<div class="mask">
+				<ul style="height:90%;list-style-type:none;list-style-image: url(css/img/gou.jpg);">
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">数据实时汇聚统计分析</p>
+					</li>
+					<li>
+						<div class="liimg"></div>
+						<p class="lip">支持多业务的实时订阅</p>
+					</li>
+					
+				</ul>
+				<!--
+				<div style="height:60%;line-height:60%;margin: 10% 0 0 0">
+					<p>数据实时汇聚统计分析</p>
+					<p>支持多业务的实时订阅</p>
+				</div>
+				-->
+			</div>
+		</div>
+	</div>
+	</div>
+	</div>
+  <div class="canvaszz"> </div>
+  <canvas id="canvas"></canvas> 
+</div>
+
+
+<!-----HEADER END----->
+
+<!--用来解决视频右键菜单，用于视频上面的遮罩层 START-->
+<!--
+<div class="videozz"></div>
+-->
+<!--用来解决视频右键菜单，用于视频上面的遮罩层 END-->
+
+<!--音乐 START-->
+<!--
+	<audio controls autoplay class="audio">
+        <source src="css/Music.mp3" type="audio/mp3"> 
+        <source src="css/Music.ogg" type="audio/ogg"> 
+        <source src="css/Music.aac" type="audio/mp4"> 
+    </audio>
+-->
+<!--音乐 END-->
+
+
+<script>
+//宇宙特效
+"use strict";
+var canvas = document.getElementById('canvas'),
+  ctx = canvas.getContext('2d'),
+  w = canvas.width = window.innerWidth,
+  h = canvas.height = window.innerHeight,
+
+  hue = 217,
+  stars = [],
+  count = 0,
+  maxStars = 500;//星星数量
+
+var canvas2 = document.createElement('canvas'),
+  ctx2 = canvas2.getContext('2d');
+canvas2.width = 100;
+canvas2.height = 100;
+var half = canvas2.width / 2,
+  gradient2 = ctx2.createRadialGradient(half, half, 0, half, half, half);
+gradient2.addColorStop(0.025, '#CCC');
+gradient2.addColorStop(0.1, 'hsl(' + hue + ', 61%, 33%)');
+gradient2.addColorStop(0.25, 'hsl(' + hue + ', 64%, 6%)');
+gradient2.addColorStop(1, 'transparent');
+
+ctx2.fillStyle = gradient2;
+ctx2.beginPath();
+ctx2.arc(half, half, half, 0, Math.PI * 2);
+ctx2.fill();
+
+// End cache
+
+function random(min, max) {
+  if (arguments.length < 2) {
+    max = min;
+    min = 0;
+  }
+
+  if (min > max) {
+    var hold = max;
+    max = min;
+    min = hold;
+  }
+
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+function maxOrbit(x, y) {
+  var max = Math.max(x, y),
+    diameter = Math.round(Math.sqrt(max * max + max * max));
+  return diameter / 2;
+  //星星移动范围，值越大范围越小，
+}
+
+var Star = function() {
+
+  // this.orbitRadius = random(maxOrbit(w, h));
+  this.orbitRadius = random(maxOrbit(w, h));
+  this.radius = random(100, this.orbitRadius) / 8; 
+  //星星大小
+  this.orbitX = w / 2;
+  this.orbitY = h / 2;
+  this.timePassed = random(0, maxStars);
+  this.speed = 5 / 50000; 
+  //星星移动速度
+  this.alpha = random(8, 10) / 10;// 亮度范围，闪烁频率
+
+  count++;
+  stars[count] = this;
+}
+
+Star.prototype.draw = function() {
+  var x = Math.sin(this.timePassed) * this.orbitRadius + this.orbitX,
+    y = Math.cos(this.timePassed) * this.orbitRadius + this.orbitY,
+    twinkle = random(10);
+
+  if (twinkle === 1 && this.alpha > 0) {
+    this.alpha -= 0.05;
+  } else if (twinkle === 2 && this.alpha < 1) {
+    this.alpha += 0.05;
+  }
+
+  ctx.globalAlpha = this.alpha;
+  ctx.drawImage(canvas2, x - this.radius / 2, y - this.radius / 2, this.radius, this.radius);
+  this.timePassed += this.speed;
+}
+
+for (var i = 0; i < maxStars; i++) {
+  new Star();
+}
+
+function animation() {
+  ctx.globalCompositeOperation = 'source-over';
+  ctx.globalAlpha = 0.5; //尾巴
+  ctx.fillStyle = 'hsla(' + hue + ', 64%, 6%, 2)';
+  ctx.fillRect(0, 0, w, h)
+
+  ctx.globalCompositeOperation = 'lighter';
+  for (var i = 1, l = stars.length; i < l; i++) {
+    stars[i].draw();
+  };
+
+  window.requestAnimationFrame(animation);
+}
+
+animation();
+/*
+var turn = function(target,time,opts){
+
+	target.find('a').hover(function(){
+
+		$(this).find('img').stop().animate(opts[0],time,function(){
+
+			$(this).hide().next().show();
+
+			$(this).next().animate(opts[1],time);
+
+		});
+
+	},function(){
+
+		$(this).find('.info').animate(opts[0],time,function(){
+
+			$(this).hide().prev().show();
+
+			$(this).prev().animate(opts[1],time);
+
+		});
+
+	});
+
+}
+
+
+var horizontalOpts = [{'height':0,'top':0},{'height':'100%','top':0}];
+
+turn($('#horizontal'),100,horizontalOpts);
+*/
+
+</script>
+
+</body>
+</html>
